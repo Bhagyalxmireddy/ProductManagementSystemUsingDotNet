@@ -9,6 +9,37 @@ namespace ProductManagementSystem
     public class Management
     {
         public readonly DataTable dataTable = new DataTable();
+        public Management()
+        {
+            dataTable.Columns.Add("ProductId", typeof(int));
+            dataTable.Columns.Add("UserId", typeof(int));
+            dataTable.Columns.Add("Rating", typeof(double));
+            dataTable.Columns.Add("Review", typeof(string));
+            dataTable.Columns.Add("IsLike", typeof(bool));
+
+
+            dataTable.Rows.Add(1, 1, 2, "Good", true);
+            dataTable.Rows.Add(2, 2, 4, "Good", true);
+            dataTable.Rows.Add(3, 3, 5, "Good", true);
+            dataTable.Rows.Add(4, 4, 3, "Bad", false);
+            dataTable.Rows.Add(5, 5, 2, "Nice", true);
+            dataTable.Rows.Add(6, 6, 1, "bad", true);
+            dataTable.Rows.Add(7, 7, 1, "Good", false);
+            dataTable.Rows.Add(8, 8, 5, "Nice", true);
+            dataTable.Rows.Add(9, 9, 4, "Nice", true);
+            dataTable.Rows.Add(10, 10, 5, "Bad", false);
+            dataTable.Rows.Add(11, 11, 3, "Nice", true);
+            dataTable.Rows.Add(12, 12, 5, "Okay", true);
+            dataTable.Rows.Add(13, 13, 4, "Nice", true);
+            dataTable.Rows.Add(14, 14, 2, "Bad", false);
+            dataTable.Rows.Add(15, 15, 3, "Nice", true);
+            dataTable.Rows.Add(16, 16, 3, "Good", true);
+            dataTable.Rows.Add(17, 17, 1, "Bad", false);
+            dataTable.Rows.Add(18, 18, 1, "Bad", true);
+            dataTable.Rows.Add(19, 19, 2, "Good", true);
+            dataTable.Rows.Add(20, 20, 5, "Good", true);
+            dataTable.Rows.Add(21, 21, 1, "Nice", true);
+        }
 
         public void TopRecords(List<ProductReview> reviews)
         {
