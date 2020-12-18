@@ -66,6 +66,14 @@ namespace ProductManagementSystem
                     "ISlike : " + list.IsLike);
             }
         }
-       
+        public void ProductIdandReviewsFromList(List<ProductReview> productReviews)
+        {
+            var recordedData = productReviews.Select(x => new { ProductId = x.ProductId, Review = x.Review  });
+            foreach (var list in recordedData)
+            {
+                Console.WriteLine("Product Id: " + list.ProductId + " " + "Review: " + list.Review);
+            }
+        }
+
     }
 }
