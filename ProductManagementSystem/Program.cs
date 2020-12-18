@@ -48,6 +48,8 @@ namespace ProductManagementSystem
             management.CountProductIds(productReviewlist);
             Console.WriteLine("Retriving all productId and review records from the list");
             management.ParticularRows(productReviewlist);
+            Console.WriteLine("Skipping the Top 5 records from the list ");
+            management.SkipTopRecords(productReviewlist);
         }
     }
 }

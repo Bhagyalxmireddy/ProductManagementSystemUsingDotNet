@@ -56,5 +56,16 @@ namespace ProductManagementSystem
                 Console.WriteLine("Product Id: " + list.ProductId + "  " + "Reviews : " + list.Review);
             }
         }
+        public void SkipTopRecords(List<ProductReview> productReviews)
+        {
+            var records = (from recods in productReviews
+                           select (recods)).Skip(5);
+            foreach (var list in records)
+            {
+                Console.WriteLine("ProductId:-" + list.ProductId + "" + "UserId:-" + list.UserId + "" + "Rating: " + list.Rating + "" + "Rivew: " + list.Review + "" +
+                    "ISlike : " + list.IsLike);
+            }
+        }
+       
     }
 }
