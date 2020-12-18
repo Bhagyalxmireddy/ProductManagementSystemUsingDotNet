@@ -1,0 +1,13 @@
+C:\Users\USER\source\repos\ProductManagementSystem\ProductManagementSystem\bin\Debug\netcoreapp3.1\ProductManagementSystem.exe
+C:\Users\USER\source\repos\ProductManagementSystem\ProductManagementSystem\bin\Debug\netcoreapp3.1\ProductManagementSystem.deps.json
+C:\Users\USER\source\repos\ProductManagementSystem\ProductManagementSystem\bin\Debug\netcoreapp3.1\ProductManagementSystem.runtimeconfig.json
+C:\Users\USER\source\repos\ProductManagementSystem\ProductManagementSystem\bin\Debug\netcoreapp3.1\ProductManagementSystem.runtimeconfig.dev.json
+C:\Users\USER\source\repos\ProductManagementSystem\ProductManagementSystem\bin\Debug\netcoreapp3.1\ProductManagementSystem.dll
+C:\Users\USER\source\repos\ProductManagementSystem\ProductManagementSystem\bin\Debug\netcoreapp3.1\ProductManagementSystem.pdb
+C:\Users\USER\source\repos\ProductManagementSystem\ProductManagementSystem\obj\Debug\netcoreapp3.1\ProductManagementSystem.csprojAssemblyReference.cache
+C:\Users\USER\source\repos\ProductManagementSystem\ProductManagementSystem\obj\Debug\netcoreapp3.1\ProductManagementSystem.AssemblyInfoInputs.cache
+C:\Users\USER\source\repos\ProductManagementSystem\ProductManagementSystem\obj\Debug\netcoreapp3.1\ProductManagementSystem.AssemblyInfo.cs
+C:\Users\USER\source\repos\ProductManagementSystem\ProductManagementSystem\obj\Debug\netcoreapp3.1\ProductManagementSystem.csproj.CoreCompileInputs.cache
+C:\Users\USER\source\repos\ProductManagementSystem\ProductManagementSystem\obj\Debug\netcoreapp3.1\ProductManagementSystem.dll
+C:\Users\USER\source\repos\ProductManagementSystem\ProductManagementSystem\obj\Debug\netcoreapp3.1\ProductManagementSystem.pdb
+C:\Users\USER\source\repos\ProductManagementSystem\ProductManagementSystem\obj\Debug\netcoreapp3.1\ProductManagementSystem.genruntimeconfig.cache
