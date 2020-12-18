@@ -27,7 +27,10 @@ namespace ProductManagementSystem
                 new ProductReview() { ProductId = 15, UserId = 15, Rating = 1, Review = "Good", IsLike = true },
                 new ProductReview() { ProductId = 16, UserId = 16, Rating = 4, Review = "Good", IsLike = true },
                 new ProductReview() { ProductId = 17, UserId = 17, Rating = 5, Review = "Good", IsLike = true },
-                new ProductReview() { ProductId = 18, UserId = 18, Rating = 4, Review = "nice", IsLike = true }
+                new ProductReview() { ProductId = 18, UserId = 18, Rating = 4, Review = "nice", IsLike = true },
+                 new ProductReview() { ProductId = 1, UserId = 1, Rating = 5, Review = "Good", IsLike = true },
+                  new ProductReview() { ProductId = 3, UserId = 1, Rating = 5, Review = "Good", IsLike = true },
+                   new ProductReview() { ProductId = 17, UserId = 1, Rating = 5, Review = "Good", IsLike = true }
 
             };
            /* foreach(var list in productReviewlist)
@@ -37,8 +40,12 @@ namespace ProductManagementSystem
              }*/
 
             Management management = new Management();
-            //management.TopRecords(productReviewlist);
+            Console.WriteLine("Retriving Top three Hightest RatingRecords");
+            management.TopRecords(productReviewlist);
+            Console.WriteLine("Retriving  Rating for a given Ids");
             management.SelectedRecords(productReviewlist);
+            Console.WriteLine("Counting the ids");
+            management.CountProductIds(productReviewlist);
         }
     }
 }
