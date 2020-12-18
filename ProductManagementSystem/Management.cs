@@ -72,7 +72,7 @@ namespace ProductManagementSystem
         }
         public void CountProductIds(List<ProductReview> productReviews)
         {
-            var recordedData = productReviews.GroupBy(x => x.ProductId).Select(x => new { ProductId = x.Key, Count = x.Count() });
+            var recordedData = productReviews.GroupBy(x => x.ProductId).Select(x => new { ProductId = x.Key, Count = x.Count()});
             foreach (var list in recordedData)
             {
                 Console.WriteLine("Product Id: " + list.ProductId + " " + "Count: " + list.Count);
@@ -103,6 +103,17 @@ namespace ProductManagementSystem
             foreach (var list in recordedData)
             {
                 Console.WriteLine("Product Id: " + list.ProductId + " " + "Review: " + list.Review);
+            }
+        }
+        public void RetrieveRecordsIsLikevalues()
+        {
+            var data = from review in dataTable.AsEnumerable()
+                       where review.Field<bool>("isLike").Equals(true)
+                       select review;
+
+            foreach (var dataValue in data)
+            {
+                Console.WriteLine($"ProductID- {dataValue.ItemArray[0]} UserID- {dataValue.ItemArray[1]} Rating- {dataValue.ItemArray[2]} Review- {dataValue.ItemArray[3]} isLike- {dataValue.ItemArray[4]}");
             }
         }
 

@@ -40,7 +40,7 @@ namespace ProductManagementSystem
              }*/
 
             Management management = new Management();
-            Console.WriteLine("Retriving Top three Hightest RatingRecords");
+            /*Console.WriteLine("Retriving Top three Hightest RatingRecords");
             management.TopRecords(productReviewlist);
             Console.WriteLine("Retriving  Rating for a given Ids");
             management.SelectedRecords(productReviewlist);
@@ -50,7 +50,8 @@ namespace ProductManagementSystem
             management.ParticularRows(productReviewlist);
             management.ProductIdandReviewsFromList(productReviewlist);
             Console.WriteLine("Skipping the Top 5 records from the list ");
-            management.SkipTopRecords(productReviewlist);
+            management.SkipTopRecords(productReviewlist);*/
+            management.RetrieveRecordsIsLikevalues();
         }
     }
 }
