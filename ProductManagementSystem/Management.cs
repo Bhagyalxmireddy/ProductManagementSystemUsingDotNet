@@ -21,5 +21,23 @@ namespace ProductManagementSystem
                      "ISlike : " + list.IsLike);
             }
         }
+        public void SelectedRecords(List<ProductReview> listproductrivews)
+        {
+            var rescordedData = from productreviews in listproductrivews
+                                where (productreviews.ProductId == 1 || productreviews.ProductId == 4 || productreviews.ProductId == 9) &&
+                                (productreviews.Rating > 3)
+                                select productreviews;
+
+
+            /*(productreviews.ProductId == 1 && productreviews.Rating > 3) ||
+            (productreviews.ProductId == 4 && productreviews.Rating > 3) ||
+            (productreviews.ProductId == 9 && productreviews.Rating > 3)
+            select productreviews;*/
+            foreach (var list in rescordedData)
+            {
+                Console.WriteLine("ProductId:-" + list.ProductId + "" + "UserId:-" + list.UserId + "" + "Rating: " + list.Rating + "" + "Rivew: " + list.Review + "" +
+                     "ISlike : " + list.IsLike);
+            }
+        }
     }
 }

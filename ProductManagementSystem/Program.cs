@@ -13,7 +13,7 @@ namespace ProductManagementSystem
                 new ProductReview() { ProductId = 1, UserId = 1, Rating = 5, Review = "Good", IsLike = true },
                 new ProductReview() { ProductId = 2, UserId = 2, Rating = 1, Review = "Good", IsLike = true },
                 new ProductReview() { ProductId = 3, UserId = 3, Rating = 3, Review = "nice", IsLike = true },
-                new ProductReview() { ProductId = 4, UserId = 4, Rating = 2, Review = "bad", IsLike = false },
+                new ProductReview() { ProductId = 4, UserId = 4, Rating = 4, Review = "bad", IsLike = false },
                 new ProductReview() { ProductId = 5, UserId = 5, Rating = 5, Review = "Good", IsLike = true },
                 new ProductReview() { ProductId = 6, UserId = 6, Rating = 4, Review = "Good", IsLike = true },
                 new ProductReview() { ProductId = 7, UserId = 7, Rating = 5, Review = "nice", IsLike = true },
@@ -37,7 +37,8 @@ namespace ProductManagementSystem
              }*/
 
             Management management = new Management();
-            management.TopRecords(productReviewlist);
+            //management.TopRecords(productReviewlist);
+            management.SelectedRecords(productReviewlist);
         }
     }
 }
