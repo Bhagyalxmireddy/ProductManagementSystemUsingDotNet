@@ -34,11 +34,11 @@ namespace ProductManagementSystem
             dataTable.Rows.Add(14, 14, 2, "Bad", false);
             dataTable.Rows.Add(15, 15, 3, "Nice", true);
             dataTable.Rows.Add(16, 16, 3, "Good", true);
-            dataTable.Rows.Add(17, 17, 1, "Bad", false);
-            dataTable.Rows.Add(18, 18, 1, "Bad", true);
-            dataTable.Rows.Add(19, 19, 2, "Good", true);
-            dataTable.Rows.Add(20, 20, 5, "Good", true);
-            dataTable.Rows.Add(21, 21, 1, "Nice", true);
+            dataTable.Rows.Add(1, 17, 1, "Bad", false);
+            dataTable.Rows.Add(2, 18, 1, "Bad", true);
+            dataTable.Rows.Add(3, 19, 2, "Good", true);
+            dataTable.Rows.Add(4, 20, 5, "Good", true);
+            dataTable.Rows.Add(5, 21, 1, "Nice", true);
         }
 
         public void TopRecords(List<ProductReview> reviews)
@@ -114,6 +114,16 @@ namespace ProductManagementSystem
             foreach (var dataValue in data)
             {
                 Console.WriteLine($"ProductID- {dataValue.ItemArray[0]} UserID- {dataValue.ItemArray[1]} Rating- {dataValue.ItemArray[2]} Review- {dataValue.ItemArray[3]} isLike- {dataValue.ItemArray[4]}");
+            }
+        }
+        public void AverageRatingByProductID()
+        {
+            var data = dataTable.AsEnumerable()
+                        .GroupBy(x => x.Field<int>("ProductID"))
+                        .Select(x => new { ProductId = x.Key, Average = x.Average(p => p.Field<double>("Rating")) });
+            foreach (var dataItem in data)
+            {
+                Console.WriteLine("Product Id: " + dataItem.ProductId + " " + "Average: " + dataItem.Average);
             }
         }
 

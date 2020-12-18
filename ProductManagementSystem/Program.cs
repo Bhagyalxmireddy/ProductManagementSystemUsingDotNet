@@ -51,7 +51,10 @@ namespace ProductManagementSystem
             management.ProductIdandReviewsFromList(productReviewlist);
             Console.WriteLine("Skipping the Top 5 records from the list ");
             management.SkipTopRecords(productReviewlist);*/
-            management.RetrieveRecordsIsLikevalues();
+            Console.WriteLine("Retrive The Records from dataTable whos IsLike value is Ture");
+            //management.RetrieveRecordsIsLikevalues();
+            Console.WriteLine("Avg value is based on ProductId");
+            management.AverageRatingByProductID();
         }
     }
 }
