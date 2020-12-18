@@ -47,6 +47,14 @@ namespace ProductManagementSystem
                 Console.WriteLine("Product Id: " + list.ProductId + " " + "Count: " + list.Count);
             }
         }
-
+        public void ParticularRows(List<ProductReview> productReviews)
+        {
+            var records = from list in productReviews
+                          select (list.ProductId, list.Review);
+            foreach(var list in records)
+            {
+                Console.WriteLine("Product Id: " + list.ProductId + "  " + "Reviews : " + list.Review);
+            }
+        }
     }
 }

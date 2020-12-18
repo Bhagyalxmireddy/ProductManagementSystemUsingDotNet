@@ -28,9 +28,9 @@ namespace ProductManagementSystem
                 new ProductReview() { ProductId = 16, UserId = 16, Rating = 4, Review = "Good", IsLike = true },
                 new ProductReview() { ProductId = 17, UserId = 17, Rating = 5, Review = "Good", IsLike = true },
                 new ProductReview() { ProductId = 18, UserId = 18, Rating = 4, Review = "nice", IsLike = true },
-                 new ProductReview() { ProductId = 1, UserId = 1, Rating = 5, Review = "Good", IsLike = true },
-                  new ProductReview() { ProductId = 3, UserId = 1, Rating = 5, Review = "Good", IsLike = true },
-                   new ProductReview() { ProductId = 17, UserId = 1, Rating = 5, Review = "Good", IsLike = true }
+                new ProductReview() { ProductId = 1, UserId = 1, Rating = 5, Review = "Good", IsLike = true },
+                new ProductReview() { ProductId = 3, UserId = 1, Rating = 5, Review = "Good", IsLike = true },
+                new ProductReview() { ProductId = 17, UserId = 1, Rating = 5, Review = "Good", IsLike = true }
 
             };
            /* foreach(var list in productReviewlist)
@@ -46,6 +46,8 @@ namespace ProductManagementSystem
             management.SelectedRecords(productReviewlist);
             Console.WriteLine("Counting the ids");
             management.CountProductIds(productReviewlist);
+            Console.WriteLine("Retriving all productId and review records from the list");
+            management.ParticularRows(productReviewlist);
         }
     }
 }
