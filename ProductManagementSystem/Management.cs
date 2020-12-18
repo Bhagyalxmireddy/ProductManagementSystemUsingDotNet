@@ -34,11 +34,11 @@ namespace ProductManagementSystem
             dataTable.Rows.Add(14, 14, 2, "Bad", false);
             dataTable.Rows.Add(15, 15, 3, "Nice", true);
             dataTable.Rows.Add(16, 16, 3, "Good", true);
-            dataTable.Rows.Add(1, 17, 1, "Bad", false);
-            dataTable.Rows.Add(2, 18, 1, "Bad", true);
-            dataTable.Rows.Add(3, 19, 2, "Good", true);
-            dataTable.Rows.Add(4, 20, 5, "Good", true);
-            dataTable.Rows.Add(5, 21, 1, "Nice", true);
+            dataTable.Rows.Add(1, 10, 1, "Bad", false);
+            dataTable.Rows.Add(2, 10, 1, "Bad", true);
+            dataTable.Rows.Add(3, 10, 2, "Good", true);
+            dataTable.Rows.Add(4, 10, 5, "Good", true);
+            dataTable.Rows.Add(5, 10, 1, "Nice", true);
         }
 
         public void TopRecords(List<ProductReview> reviews)
@@ -135,6 +135,17 @@ namespace ProductManagementSystem
             foreach (var dataRow in data)
             {
                 Console.WriteLine($"ProductId- {dataRow.ItemArray[0]} UserID- {dataRow.ItemArray[1]} Rating- {dataRow.ItemArray[2]} Review- {dataRow.ItemArray[3]} IsLike- {dataRow.ItemArray[4]}");
+            }
+        }
+        public void RetriveAllRecordsUserIdTenOrderByRating()
+        {
+            var data = from review in dataTable.AsEnumerable()
+                       where review.Field<int>("UserId").Equals(10)
+                       orderby review.Field<double>("Rating")
+                       select review;
+            foreach (var dataRow in data)
+            {
+                Console.WriteLine($"ProductID- {dataRow.ItemArray[0]} UserID- {dataRow.ItemArray[1]} Rating- {dataRow.ItemArray[2]} Review- {dataRow.ItemArray[3]} IsLike- {dataRow.ItemArray[4]}");
             }
         }
 

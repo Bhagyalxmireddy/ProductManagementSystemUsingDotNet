@@ -56,7 +56,9 @@ namespace ProductManagementSystem
             Console.WriteLine("Avg value is based on ProductId");
            // management.AverageRatingByProductID();
             Console.WriteLine("Retreve RecordsBased on Review Message Message Nice");
-            management.RetriveRecordsbasedOnReviewMessageNice();
+            //management.RetriveRecordsbasedOnReviewMessageNice();
+            Console.WriteLine("Retreve all Records Where UserId 10 OrderedBy Rating");
+            management.RetriveAllRecordsUserIdTenOrderByRating();
         }
     }
 }
