@@ -30,11 +30,14 @@ namespace ProductManagementSystem
                 new ProductReview() { ProductId = 18, UserId = 18, Rating = 4, Review = "nice", IsLike = true }
 
             };
-            foreach(var list in productReviewlist)
+           /* foreach(var list in productReviewlist)
              {
                  Console.WriteLine("ProductId:-" + list.ProductId + " " + "UserId:-" + list.UserId + " " + "Rating: " + list.Rating + " " + "Rivew: " + list.Review + " " +
                      "ISlike : " + list.IsLike);
-             }
+             }*/
+
+            Management management = new Management();
+            management.TopRecords(productReviewlist);
         }
     }
 }
