@@ -25,7 +25,7 @@ namespace ProductManagementSystem
             dataTable.Rows.Add(5, 5, 2, "Nice", true);
             dataTable.Rows.Add(6, 6, 1, "bad", true);
             dataTable.Rows.Add(7, 7, 1, "Good", false);
-            dataTable.Rows.Add(8, 8, 5, "Nice", true);
+            dataTable.Rows.Add(8, 8, 5, "Nice", false);
             dataTable.Rows.Add(9, 9, 4, "Nice", true);
             dataTable.Rows.Add(10, 10, 5, "Bad", false);
             dataTable.Rows.Add(11, 11, 3, "Nice", true);
@@ -124,6 +124,17 @@ namespace ProductManagementSystem
             foreach (var dataItem in data)
             {
                 Console.WriteLine("Product Id: " + dataItem.ProductId + " " + "Average: " + dataItem.Average);
+            }
+        }
+        public void RetriveRecordsbasedOnReviewMessageNice()
+        {
+            var data = from review in dataTable.AsEnumerable()
+                       where review.Field<string>("Review").Equals("Nice")
+                       select review;
+
+            foreach (var dataRow in data)
+            {
+                Console.WriteLine($"ProductId- {dataRow.ItemArray[0]} UserID- {dataRow.ItemArray[1]} Rating- {dataRow.ItemArray[2]} Review- {dataRow.ItemArray[3]} IsLike- {dataRow.ItemArray[4]}");
             }
         }
 

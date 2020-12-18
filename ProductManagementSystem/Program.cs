@@ -54,7 +54,9 @@ namespace ProductManagementSystem
             Console.WriteLine("Retrive The Records from dataTable whos IsLike value is Ture");
             //management.RetrieveRecordsIsLikevalues();
             Console.WriteLine("Avg value is based on ProductId");
-            management.AverageRatingByProductID();
+           // management.AverageRatingByProductID();
+            Console.WriteLine("Retreve RecordsBased on Review Message Message Nice");
+            management.RetriveRecordsbasedOnReviewMessageNice();
         }
     }
 }
